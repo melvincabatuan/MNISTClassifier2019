@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal">
+        <!-- Classify handwritten digit -->
+        <Button
+            android:id="@+id/button_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="PREDICT" />
+        <!-- Reset canvas -->
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLEAR" />
+    </LinearLayout>
+
+    <!-- Custom View for drawing the digit -->
+    <ph.edu.dlsu.ece626.CustomView
+        android:id="@+id/customView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16sp"
+            android:text="RESULT:" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            tools:text="1"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16sp"
+            android:text="CONFIDENCE:" />
+
+        <TextView
+            android:id="@+id/confidence"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            tools:text="1"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+</LinearLayout>
